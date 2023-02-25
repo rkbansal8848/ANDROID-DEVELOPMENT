@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".signup_activity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Sign up"
+        android:textColor="#9C27B0"
+        android:textSize="60sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/name1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="textEmailAddress"
+        android:hint="Name"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/textboxstyle"
+        />
+    <EditText
+        android:id="@+id/mail2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/textboxstyle"
+        />
+
+    <EditText
+        android:id="@+id/pass2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/textboxstyle"
+        />
+
+    <Button
+        android:id="@+id/create2"
+        android:layout_width="220dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="50dp"
+        android:text="CREATE ACCOUNT"
+        android:textColor="#ffff"
+        android:textSize="18sp"
+        android:background="@drawable/creataccountstyle"/>
+
+
+    <Button
+        android:id="@+id/login2"
+        android:layout_width="220dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="25dp"
+        android:text="SIGN IN"
+        android:textColor="#ffff"
+        android:textSize="18sp"
+        android:background="@drawable/signinstyle"/>
+
+</LinearLayout>

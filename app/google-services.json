@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "394128525129",
+    "project_id": "videoconferencing-app",
+    "storage_bucket": "videoconferencing-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394128525129:android:631e9c78feaf471a2cbc98",
+        "android_client_info": {
+          "package_name": "com.rkbansal.videoconferencing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "394128525129-4uls6tmidh2gfjmu2fl2mvior9n2st9u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARCOTKyDmr7LGUw9Jof1CJXMidqx0QCsI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "394128525129-4uls6tmidh2gfjmu2fl2mvior9n2st9u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

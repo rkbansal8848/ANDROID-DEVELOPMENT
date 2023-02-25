@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Video Conferencing</string>
+    <string name="mail1">mail1</string>
+    <string name="mail2">mail2</string>
+    <string name="pass1">pass1</string>
+    <string name="pass2">pass2</string>
+    <string name="name1">name1</string>
+    <string name="login1">login1</string>
+    <string name="create1">create1</string>
+    <string name="create2">create2</string>
+</resources>
