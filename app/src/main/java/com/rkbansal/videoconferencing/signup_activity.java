@@ -12,20 +12,23 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.ktx.Firebase;
 
 public class signup_activity extends AppCompatActivity {
     FirebaseAuth auth;
     EditText mail2,pass2,name1;
     Button login2,create2;
+    FirebaseFirestore database;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup_activity);
-
+        database=FirebaseFirestore.getInstance();
         auth = FirebaseAuth.getInstance();
 
         ProgressDialog progress= new ProgressDialog(signup_activity.this);
@@ -47,12 +50,22 @@ public class signup_activity extends AppCompatActivity {
                     email = mail2.getText().toString();
                     pass = pass2.getText().toString();
                     name = name1.getText().toString();
+                    User user =new User();
+                    user.setEmail(email);
+                    user.setName(name);
+                    user.setPass(pass);
 
                     auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             progress.dismiss();
                             if (task.isSuccessful()) {
+                                database.collection("Users").document().set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void unused) {
+                                   startActivity(new Intent(signup_activity.this,login_activity.class));
+                                    }
+                                });
                                 Toast.makeText(signup_activity.this, "Account is Created", Toast.LENGTH_SHORT).show();
                             } else {
                                 Toast.makeText(signup_activity.this, task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
